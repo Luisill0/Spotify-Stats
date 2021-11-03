@@ -58,3 +58,24 @@ h1{
     padding: 18px 5px;
     margin: 5px;
 }
+
+#loginPromt{
+    padding-bottom: 20px;
+}
+
+div{
+    column-gap: 10px;
+}
+
+.col{
+    column-gap: 10px;
+    column-width: 20px;
+    margin: 1px;
+    width: 5px;
+    padding-right: 5px;
+}
+
+.list{
+    font-size: 16px;
+    font-family: Verdana;
+}
