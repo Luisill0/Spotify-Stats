@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis' music tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="app.js"></script>
+</head>
+
+<body onload="onPageLoad()">
+    <h1>
+        Los hola mundo son para perdedores, yo le digo adios a ese we
+    </h1>
+
+    <div class="container">
+        <div id="loginPromt" class="row">
+            <div class="col">
+                <input class = "btn-lg" type="button" onclick="requestAuthorization()" value="Login"><br/>
+            </div>
+            <div class="col">
+                <input class = "btn-clear" type="button" onclick="emptyLocalStorage()" value="Empty Storage"><br/>
+            </div>
+        </div>
+        <div id="authApproved" class="row">
+            <div class="col">
+                <input class = "btn-artists" type="button" onclick="getTopArtists()" value="View top artists"><br/>
+            </div>
+            <div class="col">
+                <input class = "btn-tracks" type="button" onclick="getTopTracks()" value="View top tracks"><br/>
+            </div>
+            <div id="dataShown" class = "container">
+                <ul id = "list"></ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
