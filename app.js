@@ -1,4 +1,5 @@
-var redirect_uri = 'http://127.0.0.1:5500/Luis-music-tracker/index.html';
+var redirect_uri = 'https://luisill0.github.io/Spotify-Top-Tracker/';
+//var redirect_uri = 'http://127.0.0.1:5500/Luis-music-tracker/index.html';
 var client_id = '7695d2ea0520498fa93a5c3c364e022a'; 
 var client_secret = '5f34504d97894b6bad62d1bfc916af51';
 
