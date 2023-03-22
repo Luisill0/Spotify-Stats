@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <title>Spotify Stats by Luiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body onload="onPageLoad()">
+    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+    <div class="header prevent-select">
+        <h1>Spotify Stats</h1>
+        <a href="/login">
+            <div class="login" id="loginBtn">
+                Login With Spotify
+            </div>
+        </a>
+        <div class="loggedIn hidden" id="loggedInfo">
+            <div><span id="loggedAs"></span></div>
+            <div><span class="name" id="name"></span></div>
+            <div><img class="pfp" id="pfp"/></div>
+        </div>
+    </div>
+    <div class="options loggedin prevent-select hidden" id="options">
+        <div class="button" onclick="getArtists()">
+            View Top Artists
+        </div>
+        <div class="button" onclick="getTracks()">
+            View Top Tracks
+        </div>
+    </div>
+    <div class="embeds" id="embeds"></div>
+
+    <footer>
+        <div class='author'>
+            <img src='assets/Copyleft.svg' width='15px' className="disable-select" alt='CopyLeft icon'></img>
+            <span>2023 Luis Naranjo</span>
+        </div>
+        <div class='disclaimer'>
+            <span>This web app is licensed under GPLv3, check out the source code </span>
+            <a href="https://github.com/Luisill0/Spotify-Top-Tracker" target="_blank" rel="noopener noreferrer">here</a>
+        </div>
+    </footer>
+</body>
+</html>

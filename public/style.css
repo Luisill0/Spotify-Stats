@@ -1,0 +1,133 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #CDB4DB;
+    margin: 0;
+    padding: 0;
+}
+
+a, input {
+    all: unset;
+}
+
+.hidden {
+    position: absolute;
+    top: -500px;
+    left: -500px;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFAFCC;
+    color: #00294f;
+    padding: 0 25px;
+    box-shadow: 5px 5px 5px #db769b;
+}
+
+.header .login {
+    color: black;
+    background-color: #1ed760;
+    border-color: #116e32;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 11px 20px 9px;
+    transition: color .15s ease, background-color .15s ease, border-color .15s ease;
+}
+
+.header .login:hover {
+    cursor: pointer;
+    background-color: white;
+    border-color: 1px solid black;
+}
+
+.header .loggedIn {
+    display: flex;
+    align-items: center;
+}
+
+.header .loggedIn img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-left: 10px;
+    display: inherit;
+}
+
+.header .loggedIn .name {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+}
+
+.button {
+    color: #00294f;
+    padding: 10px 20px;
+    background-color: #FFC8DD;
+    border-radius: 20px;
+    margin: 25px;
+    transition: color .15s ease, background-color .15s ease, border-color .15s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    border: 1px solid #FFC8DD;
+}
+
+.embeds {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+}
+
+footer {
+    position: fixed;
+    height: fit-content;
+    background-color: #FFC8DD;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    color: #00294f;
+    padding-top: 15px;
+}
+
+.author img {
+    filter: invert(14%) sepia(28%) saturate(3786%) hue-rotate(186deg) brightness(90%) contrast(104%);
+    margin-right: 5px;
+}
+
+.disclaimer {
+    color: #00294f;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.disclaimer a {
+    color: blue;
+    text-decoration: underline;
+}
+  
+.disclaimer a:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
