@@ -91,6 +91,7 @@ a, input {
     display: flex;
     flex-direction: column;
     padding: 0 25px;
+    margin-bottom: 100px;
 }
 
 footer {
