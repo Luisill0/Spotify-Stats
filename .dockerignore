@@ -1,0 +1,7 @@
+.git/*
+node_modules/*
+images/*
+.gitignore
+LICENSE
+README.md
+dist/*

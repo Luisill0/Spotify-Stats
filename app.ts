@@ -103,5 +103,6 @@ app.get('/callback', async (req, res) => {
     }
 });
 
-console.log('Listening on 3000');
-app.listen(3000);
+const port = parseInt(process.env.PORT ?? '3000');
+console.log(`Listening on ${port}`);
+app.listen(port);
