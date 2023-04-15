@@ -1,8 +1,12 @@
 import cors from 'cors';
+import path from 'path';
 import dotenv from 'dotenv';
+import helmet from 'helmet';
 import express from 'express';
+import compression from 'compression';
 import querystring from 'querystring';
 import cookieParser from 'cookie-parser';
+import RateLimit from 'express-rate-limit';
 import axios, { AxiosRequestConfig } from 'axios';
 
 import { generateRandomString } from './helpers';
@@ -19,11 +23,19 @@ const ME = 'https://api.spotify.com/v1/me';
 
 const stateKey = 'spotify_auth_state';
 
+const limiter = RateLimit({
+    windowMs: 1 * 60 * 1000,
+    max: 20
+})
+
 const app = express();
 
-app.use(express.static(__dirname + '/public'))
+app.use(compression())
+   .use(express.static(path.join(__dirname,'public')))
    .use(cors())
-   .use(cookieParser());
+   .use(cookieParser())
+   .use(helmet())
+   .use(limiter);
 
 app.get('/login', ((req, res) => {
     const state = generateRandomString(16);
